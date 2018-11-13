@@ -6,7 +6,7 @@ import pygame
 
 from pygame.examples import aliens
 
-import alien
+from alien import Alien
 
 from bullet import Bullte
 
@@ -49,8 +49,7 @@ def update_screen(ai_settings, screen, ship, aliens, bullets):
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
-    aliens.blitme()
-#    aliens.draw(screen)
+    aliens.draw(screen)
     pygame.display.flip()
 
 
@@ -60,9 +59,9 @@ def update_bullets(bullets):
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
 
-def create_fleet(ai_settings, screen):
+def create_fleet(ai_settings, screen,aliens):
     alien = Alien(ai_settings, screen)
-    alien_width = alien.rect_width
+    alien_width = alien.rect.width
     available_space_x = ai_settings.screen_width - 2 * alien_width
     number_alien_x = int(available_space_x / (2 * alien_width))
 

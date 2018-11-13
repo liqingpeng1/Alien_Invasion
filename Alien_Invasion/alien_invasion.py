@@ -26,19 +26,19 @@ def run_game():
     bg_color = (230, 230, 230)
     bullets = Group()
     aliens = Group()
-    alien = Alien(ai_settings, screen)
-    gf.update_screen(ai_settings, screen, ship, alien, bullets)
+    gf.create_fleet(ai_settings, screen, aliens)
+    gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
     while True:
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
         bullets.update()
-        gf.update_screen(ai_settings, screen, ship, alien, bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
         screen.fill(bg_color)
         ship.blitme()
         pygame.display.flip()
         gf.update_bullets(bullets)
-        gf.update_screen(ai_settings, screen, ship, alien, bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
 run_game()
 
