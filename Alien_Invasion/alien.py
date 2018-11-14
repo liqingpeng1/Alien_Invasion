@@ -19,6 +19,7 @@ class Alien(Sprite):
         self.rect.y = self.rect.height
 
         self.x = float(self.rect.x)
+        self.alien_speed_factor = 1
 
     def check_edges(self):
         screen_rect = self.screen.get_rect()
@@ -28,7 +29,7 @@ class Alien(Sprite):
             return True
 
     def update(self):
-        self.x += (self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction)
+        self.x += (self.ai_settings.alien_speed_factor * self.ai_settings.fleet_drop_direction)
         self.rect.x = self.x
 
     def blitme(self):

@@ -14,6 +14,8 @@ import game_functions as gf
 
 from alien import Alien
 
+from game_stats import GameStats
+
 
 
 def run_game():
@@ -26,8 +28,10 @@ def run_game():
     bg_color = (230, 230, 230)
     bullets = Group()
     aliens = Group()
-    gf.create_fleet(ai_settings, screen, aliens)
+    gf.create_fleet(ai_settings, screen, ship,aliens)
     gf.update_screen(ai_settings, screen, ship, aliens, bullets)
+    gf.create_fleet(ai_settings, screen, ship, aliens)
+    stats = GameStats(ai_settings)
 
     while True:
         gf.check_events(ai_settings, screen, ship, bullets)
@@ -37,8 +41,10 @@ def run_game():
         screen.fill(bg_color)
         ship.blitme()
         pygame.display.flip()
-        gf.update_bullets(bullets)
+        gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
+        gf.update_aliens(ai_settings, stats,screen, ship, aliens, bullets)
         gf.update_screen(ai_settings, screen, ship, aliens, bullets)
+
 
 run_game()
 
