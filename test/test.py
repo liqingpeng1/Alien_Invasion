@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #!-*- coding:utf-8 -*-
 
-'''
+
 invite=["zhangsan","lisi","wanger","zhouyi"] #创建一个列表
 print(invite) #打印列表
 print("lisi not come") #打印李四无法参加
@@ -20,7 +20,7 @@ a=invite.pop()#赋值a为当前删除的列表元素
 print(a+" "+"sorry!")#打印a
 b=invite.pop()
 print(b+" "+"sorry!")
-=======
+
 # /usr/bin/env python
 # coding:utf-8
 
@@ -232,7 +232,7 @@ friend={
     "last_name":"大哥",
     "age":"18",
     "city1":"重庆",
-    "city":"重庆"
+    "city":"重庆",
     "first_name":"王",
     "last_name":"小二",
     "age":"18",
@@ -379,17 +379,17 @@ def make_album(name,album_name, num = ""):
 
 
 while 1:
-    a = raw_input("请输入你的名字：")
+    a = str(input("请输入你的名字："))
     if a == "q":
         break
-    b = raw_input("请输入你的专辑名：")
-    c = raw_input("请输入你的歌曲数：")
-    a = raw_input("请输入你猜测的数字：")
+    b = str(input("请输入你的专辑名："))
+    c = str(input("请输入你的歌曲数："))
+    a = str(input("请输入你猜测的数字："))
     if a == "q":
         break
-    b = raw_input("璇疯緭鍏ヤ綘鐨勪笓杈戝悕锛�")
-    c = raw_input("璇疯緭鍏ヤ綘鐨勬瓕鏇叉暟锛�")
-    d=make_album(a,b,num=c)
+    b = str(input("璇疯緭鍏ヤ綘鐨勪笓杈戝悕锛�"))
+    c = str(input("璇疯緭鍏ヤ綘鐨勬瓕鏇叉暟锛�"))
+    d = make_album(a,b,num=c)
     print(d)
 
 
@@ -416,10 +416,7 @@ pizzas("1","2","3","4")
 
 def build_pofile(first,last,**user_info):#定义一个函数，**user_info一个空列表的形参
 
-def build_pofile(first,last,**user_info):#瀹氫箟涓�涓嚱鏁帮紝**user_info涓�涓┖鍒楄〃鐨勫舰鍙�
-
-    my_pofile={}
-    my_pofile={
+    my_pofile = {
         'first_name':first,
         'last_name':last,
     }
@@ -435,7 +432,7 @@ import time
 print(time.time())
 
 
-from test_01 import  build_pofile as bp
+from test import  build_pofile as bp
 
 bp("li","qing")
 
@@ -467,12 +464,9 @@ class User:
 
 
 
-
-    print("褰撳墠鐢ㄦ埛鐧婚檰浜�" + str(self.login_attempts) + "娆�")
-
     def reset_login_attempts(self):
         self.login_attempts = 0
-        print("鐢ㄦ埛鐧婚檰娆℃暟宸茶閲嶇疆涓�:" + str(self.login_attempts) + "娆�")
+        print("用户登陆次数已被重置为:" + str(self.login_attempts) + "次")
 
 
 
@@ -576,7 +570,7 @@ with open(FlseTest, 'a') as FT:
 
 Filetest="guest_book.txt"
 
-<<<<<<< Updated upstream
+
 print("输入quit退出输入")
 
 while True:
@@ -589,7 +583,6 @@ while True:
             print(ipt+" "+"你好！")
         except AttributeError:
             print("\n输入有误，请重新输入")
-=======
 print("杈撳叆quit閫�鍑鸿緭鍏�")
 
 while True:
@@ -609,7 +602,7 @@ import datetime
 print(datetime.datetime.now())
 datetime.datetime.now().replace(minute=3, hour=2)
 
-'''
+
 
 import random
 
@@ -626,7 +619,7 @@ while True:
 
 
 
-
+import random
 AuthCode = ""
 
 a = str(random.randint(0, 9))
