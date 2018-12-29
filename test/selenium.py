@@ -23,7 +23,7 @@ print(b+" "+"sorry!")
 =======
 # /usr/bin/env python
 # coding:utf-8
-'''
+
 invite=["zhangsan","lisi","wanger","zhouyi"]
 print(invite)
 print("lisi not come")
@@ -73,21 +73,19 @@ travel.sort()
 print(travel)
 print(len(travel))
 
-'''
-<<<<<<< Updated upstream
-'''
+
+
 y=list(range(2,11,2))#创建一个2到10的偶数列表
 import cursor as cursor
 
-'''
+
 y=list(range(2,11,2))
->>>>>>> Stashed changes
+
 print(y)
 print(min(y))
 for i in range(0,10):
     print(i)
-'''
-'''
+
 pizzas=["orange","apple","durian"]
 print(pizzas)
 for pizza in pizzas:
@@ -106,7 +104,6 @@ for i in range(0,21):
 numbers=list(range(1,1000001))
 print(min(numbers))
 print(max(numbers))
-<<<<<<< Updated upstream
 print(sum(numbers))#总和
 
 OddNumber=list(range(1,21,2)) #创建一个1-20的奇数列表
@@ -124,7 +121,6 @@ for a in range(1,11):
 print(cubes)
 
 cubee=[b**3 for b in range(1,11,2)]#列表解析将FOR循环和创造新元素的代码合在了一起
-=======
 print(sum(numbers))
 OddNumber=list(range(1,21,2)) 
 for odd in OddNumber:
@@ -141,7 +137,6 @@ for a in range(1,11):
 print(cubes)
 
 cubee=[b**3 for b in range(1,11,2)]
->>>>>>> Stashed changes
 print(cubee)
 
 
@@ -155,7 +150,6 @@ else:
 a="Cat"
 print(a.lower())
 
-<<<<<<< Updated upstream
 age=int(input("请输入的年龄:"))
 if age<4:
     print("免费")
@@ -163,7 +157,6 @@ elif 4<=age<18:
     print("收费5元")
 else:
     print("收费10元")
-=======
 age=int(input("请输入你的年龄:"))
 if age<4:
     print("小学生")
@@ -171,7 +164,6 @@ elif 4<=age<18:
     print("幼儿园")
 else:
     print("垃圾")
->>>>>>> Stashed changes
 
 
 alien_color=["yellow","green","red"]
@@ -236,19 +228,16 @@ for num_01 in num:
         print(str(num_01)+"th")
 
 friend={
-<<<<<<< Updated upstream
     "first_name":"李",
     "last_name":"大哥",
     "age":"18",
     "city1":"重庆",
     "city":"重庆"
-=======
     "first_name":"王",
     "last_name":"小二",
     "age":"18",
     "city1":"china",
     "city":"mocswo"
->>>>>>> Stashed changes
 }
 for a in set(friend.values()):
     print(a)
@@ -259,25 +248,18 @@ rivers={
     "Amazon":"Andes",
     "nile":"egypt"
 }
-<<<<<<< Updated upstream
 rivers["changjiang"]="china"#增加字典键、值
 rivers["nile"]="china"#修改字典值
 del rivers["the Nile"]#删除字典键、值
-=======
 rivers["changjiang"]="china"
 rivers["nile"]="china"
 del rivers["the Nile"]
->>>>>>> Stashed changes
 print(rivers)
 for river in rivers.keys():
     for city in rivers.values():
         print(river.title()+" "+"runs though"+" "+city.title())
 
-<<<<<<< Updated upstream
 #字典嵌套
-=======
-
->>>>>>> Stashed changes
 people={
     'zhang':{
         'first_name':'zhang',
@@ -303,7 +285,6 @@ for i,j in people.items():
     print("age:"+j["age"])
 
 
-<<<<<<< Updated upstream
 money=(input("请问你们多少人用餐："))
 if money == 8:
     print("有空位")
@@ -315,7 +296,6 @@ if numbe%10 == 0:
     print("输入的数字是10的整数倍")
 elif numbe%10 !=0:
     print("输入的数字不是10的整数倍")
-=======
 money=(input("请输入你的金额"))
 if money == 8:
     print("对了")
@@ -327,16 +307,11 @@ if numbe%10 == 0:
     print("猜对了")
 elif numbe%10 !=0:
     print("猜错了")
->>>>>>> Stashed changes
-'''
-'''
+
 a = True
 while a:
-<<<<<<< Updated upstream
     ps = input("请输入你的配料：")
-=======
     ps = input("请输入你猜测的数字：")
->>>>>>> Stashed changes
     if ps == 8:
         break
     else:
@@ -344,7 +319,6 @@ while a:
 
 age =1
 while age:
-<<<<<<< Updated upstream
     age_1=int(input("请输入你的年龄："))
     if 0<age_1 <3:
         print("免费")
@@ -352,7 +326,6 @@ while age:
         print("收费10$")
     elif age_1>12:
         print("收费15$")
-=======
     age_1=int(input("请输入你的年龄"))
     if 0<age_1 <3:
         print("小学生")
@@ -360,7 +333,6 @@ while age:
         print("幼儿园")
     elif age_1>12:
         print("垃圾")
->>>>>>> Stashed changes
     else:
         break
 
@@ -380,11 +352,10 @@ def a():
 a()
 
 def make_shirt(size,font=" i love python"):
-<<<<<<< Updated upstream
     print("这件体恤型号"+size+","+"这件体恤印有字体"+font)
-=======
+
     print("这件衣服"+size+","+"和我"+font)
->>>>>>> Stashed changes
+
 
 make_shirt("big size")
 
@@ -408,19 +379,16 @@ def make_album(name,album_name, num = ""):
 
 
 while 1:
-<<<<<<< Updated upstream
     a = raw_input("请输入你的名字：")
     if a == "q":
         break
     b = raw_input("请输入你的专辑名：")
     c = raw_input("请输入你的歌曲数：")
-=======
     a = raw_input("请输入你猜测的数字：")
     if a == "q":
         break
     b = raw_input("璇疯緭鍏ヤ綘鐨勪笓杈戝悕锛�")
     c = raw_input("璇疯緭鍏ヤ綘鐨勬瓕鏇叉暟锛�")
->>>>>>> Stashed changes
     d=make_album(a,b,num=c)
     print(d)
 
@@ -438,23 +406,18 @@ show_magicians(magician)
 
 def pizzas(*name):
     for pizza in name:
-<<<<<<< Updated upstream
         print("点的配料是"+pizza)
-=======
         print("鐐圭殑閰嶆枡鏄�"+pizza)
->>>>>>> Stashed changes
-
 
 pizzas("lajiao")
 pizzas("xiangcai","dasuan")
 pizzas("1","2","3","4")
 
 
-<<<<<<< Updated upstream
 def build_pofile(first,last,**user_info):#定义一个函数，**user_info一个空列表的形参
-=======
+
 def build_pofile(first,last,**user_info):#瀹氫箟涓�涓嚱鏁帮紝**user_info涓�涓┖鍒楄〃鐨勫舰鍙�
->>>>>>> Stashed changes
+
     my_pofile={}
     my_pofile={
         'first_name':first,
@@ -476,10 +439,6 @@ from test_01 import  build_pofile as bp
 
 bp("li","qing")
 
-'''
-
-'''
->>>>>>> Stashed changes
 class User:
 
     def __init__(self, first_name, last_name, age, gender):
@@ -500,7 +459,6 @@ class User:
 
     def increment_login_attempts(self):
         self.login_attempts += 1
-<<<<<<< Updated upstream
         print("当前用户登陆了" + str(self.login_attempts) + "次")
 
     def reset_login_attempts(self):
@@ -528,8 +486,8 @@ user1.increment_login_attempts()
 user1.increment_login_attempts()
 user1.increment_login_attempts()
 user1.reset_login_attempts()
-<<<<<<< Updated upstream
-'''
+
+
 
 class Restaurant():
     def __init__(self):
@@ -603,21 +561,18 @@ class Admin(User):
 # admin1.show_privileges()
 
 
-''''
+
 FlseTest="guest.txt"
 
 with open(FlseTest, 'a') as FT:
     FT.write("请输入你的名字："+str(input("请输入你的名字：")))
-=======
 
 FlseTest="guest.txt"
 
 with open(FlseTest, 'a') as FT:
     FT.write("璇疯緭鍏ヤ綘鐨勫悕瀛楋細"+str(input("璇疯緭鍏ヤ綘鐨勫悕瀛楋細")))
->>>>>>> Stashed changes
     print(FT)
     FT.close()
-
 
 Filetest="guest_book.txt"
 
@@ -647,38 +602,30 @@ while True:
             print(ipt+" "+"浣犲ソ锛�")
         except AttributeError:
             print("\n杈撳叆鏈夎锛岃閲嶆柊杈撳叆")
->>>>>>> Stashed changes
             f.close()
-'''
-'''
+
 import datetime
 
 print(datetime.datetime.now())
 datetime.datetime.now().replace(minute=3, hour=2)
+
 '''
 
 import random
 
-'''
 num = random.randint(1, 9)
 
 while True:
-<<<<<<< Updated upstream
     num1 = int(input("请输入你猜测的数字："))
     if num == num1:
         print("猜对了！")
         break
     elif num != num1:
         print("猜错了再猜！")
-=======
-    num1 = int(input("璇疯緭鍏ヤ綘鐚滄祴鐨勬暟瀛楋細"))
-    if num == num1:
-        print("鐚滃浜嗭紒")
-        break
-    elif num != num1:
-        print("鐚滈敊浜嗗啀鐚滐紒")
->>>>>>> Stashed changes
-'''
+    num1 = int(input("请输入你猜测的数字:"))
+
+
+
 
 AuthCode = ""
 
