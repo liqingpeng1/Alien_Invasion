@@ -93,7 +93,7 @@ for pizza in pizzas:
 print("I relly love pizza")
 
 
-animals=["cat","dog","pig"]
+animals = ["cat","dog","pig"]
 for animal in animals:
     print("A"+' '+animal.title()+' '+"would make a great pet")
 print("These animals all have legs")
