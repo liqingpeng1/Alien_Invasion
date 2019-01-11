@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #!-*- coding:utf-8 -*-
 
-
+'''
 invite=["zhangsan","lisi","wanger","zhouyi"] #创建一个列表
 print(invite) #打印列表
 print("lisi not come") #打印李四无法参加
@@ -253,7 +253,7 @@ rivers["nile"]="china"#修改字典值
 del rivers["the Nile"]#删除字典键、值
 rivers["changjiang"]="china"
 rivers["nile"]="china"
-del rivers["the Nile"]
+
 print(rivers)
 for river in rivers.keys():
     for city in rivers.values():
@@ -633,3 +633,52 @@ AuthCode = a + b + c + d + e + f
 
 print(AuthCode)
 
+import easygui, random
+num = random.randint(1,3)
+numbers = 0
+feavl = easygui.msgbox("现在开始一个猜数字游戏且只有五次机会")
+# easygui.msgbox("你选择的是" + feavl)
+# feavl = easygui.choicebox("请选择你要的口味",choices=["蓝莓","草莓","树莓"])//按钮选择
+# feavl = easygui.enterbox("请输入你要的口味",default="草莓")//一个输入框
+# feavl = easygui.mulenterbox(""你的名字是,"你的年龄是")//可支持同页面多输入框
+while True and numbers < 5:
+    feavl = easygui.integerbox("请输入你猜测的数字")#输入的是整数型
+    if feavl == num:
+        easygui.msgbox("你猜对了")
+        break
+    elif feavl != num:
+        easygui.msgbox("你猜错了")
+    numbers += 1
+
+
+import easygui
+easygui.msgbox("现在开始收集你的信息")
+first_name = easygui.enterbox("请输入你的名字")
+num = easygui.integerbox("请输入你的房间号")
+city = easygui.enterbox("请输入你的城市")
+postcode = easygui.enterbox("请输入你的邮编")
+easygui.msgbox("你的地址是："+"\n"+ first_name+"\n"+str(num)+"\n"+city+"\n"+str(postcode))
+
+import easygui as g
+g.msgbox("招聘足球训练生", title="报名", ok_button ="确定")
+gender = str(g.choicebox("请输入你的性别", choices=["男", "女"]))
+age = g.integerbox("请输入你年龄", lowerbound=0, upperbound=100)
+if gender == "女" and 10 <= age and age <= 12:
+    g.msgbox("恭喜你,合格了", title="招聘", ok_button="确定")
+else:
+    g.msgbox("对不起你不合要求", title="招聘", ok_button="确定")
+
+import easygui
+password = "111111"
+username = "111111"
+title = "登陆"
+name = ["*登录账号", "*登录密码"]
+user=easygui.multenterbox("请输入你登录账号和密码", title, name)
+print(user)
+if user[0] == username and user[1] == password:
+    easygui.msgbox("登陆成功")
+elif user[0] != username and user[1] == password:
+    easygui.buttonbox("登陆账号错误", choices=["重新登录", "退出"])
+else:
+    easygui.buttonbox("登陆密码错误", choices=["重新登录", "退出"])
+'''
