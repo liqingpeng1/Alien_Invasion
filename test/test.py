@@ -681,4 +681,19 @@ elif user[0] != username and user[1] == password:
     easygui.buttonbox("登陆账号错误", choices=["重新登录", "退出"])
 else:
     easygui.buttonbox("登陆密码错误", choices=["重新登录", "退出"])
+
+import time
+def timesleep(timem):
+    for i in range(timem,0,-1):
+        print(str(i) + "s")
+        time.sleep(1)
+    print("over")
+
+timesleep(3)
 '''
+import random
+list1 = []
+for i in range(0,6):
+    f = random.randint(0, 21)
+    list1.append(str(f))
+    print(list1)
