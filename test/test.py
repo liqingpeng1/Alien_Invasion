@@ -692,8 +692,14 @@ def timesleep(timem):
 timesleep(3)
 '''
 import random
+import time
 list1 = []
 for i in range(0,6):
     f = random.randint(0, 21)
     list1.append(str(f))
     print(list1)
+
+for i in range(30, 0, -3):
+    num = random.random() * 10
+    print(num)
+    time.sleep(3)
