@@ -690,7 +690,7 @@ def timesleep(timem):
     print("over")
 
 timesleep(3)
-'''
+
 import random
 import time
 list1 = []
@@ -703,3 +703,35 @@ for i in range(30, 0, -3):
     num = random.random() * 10
     print(num)
     time.sleep(3)
+
+import pygame,random
+from pygame.color import THECOLORS
+screen = pygame.display.set_mode([740, 580])
+screen.fill([255,255,255])
+for i in range(0,100):
+    width = random.randint(0,150)
+    height = random.randint(0,100)
+    colors_name = random.choice(THECOLORS.keys())
+    color = THECOLORS(colors_name)
+    top = random.randint(0,600)
+    left = random.randint(0,490)
+    pygame.draw.rect(screen,color,[left,top,left,height],1)
+pygame.display.flip()
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type ==pygame.QUIT:
+            running = False
+pygame.quit()
+'''
+from selenium import webdriver
+import time
+driver = webdriver.Chrome()
+driver.get("http://www.baidu.com")
+driver.maximize_window()
+size = driver.get_window_position()
+print(size)
+hendle = (driver.current_window_handlent)
+print(hendle)
+time.sleep(5)
+driver.quit()
