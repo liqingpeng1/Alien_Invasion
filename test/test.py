@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#!-*- coding:utf-8 -*-
+# !-*- coding:utf-8 -*-
 
 '''
 invite=["zhangsan","lisi","wanger","zhouyi"] #创建一个列表
@@ -723,7 +723,7 @@ while running:
         if event.type ==pygame.QUIT:
             running = False
 pygame.quit()
-'''
+
 from selenium import webdriver
 import time
 driver = webdriver.Chrome()
@@ -733,5 +733,18 @@ size = driver.get_window_position()
 print(size)
 hendle = (driver.current_window_handlent)
 print(hendle)
+driver.find_element_by_id("kw").send_keys("python")
+driver.find_element_by_id("su").click()
 time.sleep(5)
 driver.quit()
+'''
+import xlrd
+elcel = xlrd.open_workbook(u"test.xlsx")
+table = elcel.sheet_by_index(0)
+nrows = table.nrows
+a = table.row_values(0, 0)
+b = table.col_values(0, 2)
+# print(a,b)
+values = table.cell(0, 0).value
+print(values)
+
