@@ -737,7 +737,7 @@ driver.find_element_by_id("kw").send_keys("python")
 driver.find_element_by_id("su").click()
 time.sleep(5)
 driver.quit()
-'''
+
 import xlrd
 elcel = xlrd.open_workbook(u"test.xlsx")
 table = elcel.sheet_by_index(0)
@@ -747,4 +747,4 @@ b = table.col_values(0, 2)
 # print(a,b)
 values = table.cell(0, 0).value
 print(values)
-
+'''
