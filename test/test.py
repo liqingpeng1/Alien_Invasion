@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 # !-*- coding:utf-8 -*-
 
@@ -122,7 +123,7 @@ print(cubes)
 
 cubee=[b**3 for b in range(1,11,2)]#列表解析将FOR循环和创造新元素的代码合在了一起
 print(sum(numbers))
-OddNumber=list(range(1,21,2)) 
+OddNumber=list(range(1,21,2))
 for odd in OddNumber:
     print(odd)
 
@@ -132,7 +133,7 @@ for mup in mupitle:
 
 cubes=[]#
 for a in range(1,11):
-    cube=a**3 
+    cube=a**3
     cubes.append(cube)
 print(cubes)
 
@@ -747,4 +748,170 @@ b = table.col_values(0, 2)
 # print(a,b)
 values = table.cell(0, 0).value
 print(values)
+
+
+import urllib.request
+import urllib.parse
+import time
+from bs4 import BeautifulSoup
+
+class ZhiLianSpider(object):
+    def __init__(self, jl, kw, start_page, end_page):
+        # 保存到成员属性中，这样在其他的方法中就可以直接使用
+        self.jl = jl
+        self.kw = kw
+        self.start_page = start_page
+        self.end_page = end_page
+
+        self.items = []
+
+    def handle_request(self, page):
+        url = 'https://sou.zhaopin.com/jobs/searchresult.ashx?'
+        data = {
+            'jl': self.jl,
+            'kw': self.kw,
+            'p': page,
+        }
+        query_string = urllib.parse.urlencode(data)
+        # 拼接url
+        url += query_string
+        # print(url)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+        }
+        return urllib.request.Request(url=url, headers=headers)
+
+    def parse_content(self, content):
+        # 生成soup对象
+        soup = BeautifulSoup(content, 'lxml')
+        # 首先找到所有的table
+        table_list = soup.find_all('table', class_='newlist')[1:]
+        # print(table_list)
+        # print(len(table_list))
+        # 遍历所有的table，依次提取每一个工作的信息
+        for table in table_list:
+            # 职位名称
+            zwmc = table.select('.zwmc a')[0].text.strip('\xa0')
+            # 公司名称
+            gsmc = table.select('.gsmc a')[0].text
+            # 职位月薪
+            zwyx = table.select('.zwyx')[0].text
+            # 工作地点
+            gzdd = table.select('.gzdd')[0].text
+            # print(gzdd)
+            # exit()
+            item = {
+                '职位名称': zwmc,
+                '公司名称': gsmc,
+                '职位月薪': zwyx,
+                '工作地点': gzdd,
+            }
+            self.items.append(item)
+
+    def run(self):
+        # 搞个循环
+        for page in range(self.start_page, self.end_page + 1):
+            print('正在爬取第%s页......' % page)
+            #　拼接url的过程，构建请求对象
+            request = self.handle_request(page)
+            content = urllib.request.urlopen(request).read().decode('utf8')
+            # 给我请求对象，解析并且提取内容
+            self.parse_content(content)
+            print('结束爬取第%s页' % page)
+            time.sleep(2)
+
+        # 将所有的工作保存到文件中
+        string = str(self.items)
+        with open('work.txt', 'w', encoding='utf8') as fp:
+            fp.write(string)
+
+def main():
+    # 输入工作地点
+    jl = input('请输入工作地点:')
+    # 输入工作关键字
+    kw = input('请输入关键字:')
+    # 输入起始页码
+    start_page = int(input('请输入起始页码:'))
+    # 输入结束页码
+    end_page = int(input('请输入结束页码:'))
+    zhilian = ZhiLianSpider(jl, kw, start_page, end_page)
+    zhilian.run()
+
+if __name__ == '__main__':
+    main()
+
+import urllib.request
+import urllib.parse
+from bs4 import BeautifulSoup
+import time
+
+# 给我一个url，返回一个请求对象
+def handle_request(url):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+    }
+    return urllib.request.Request(url=url, headers=headers)
+
+def parse_first_page(url):
+    request = handle_request(url)
+    # 发送请求，获取响应
+    content = urllib.request.urlopen(request).read().decode('utf8')
+    time.sleep(2)
+    # 使用bs解析内容,生成soup对象
+    soup = BeautifulSoup(content, 'lxml')
+    # print(soup)
+    # 查找所有的章节链接对象
+    a_list = soup.select('.book-mulu > ul > li > a')
+    # print(ret)
+    # print(len(ret))
+    # 打开文件
+    fp = open('三国演义.txt', 'w', encoding='utf8')
+    # 遍历所有的a对象
+    for oa in a_list:
+        # 取出这个a的内容
+        title = oa.string
+        # 取出a的href属性
+        href = 'http://www.shicimingju.com' + oa['href']
+
+        print('正在下载%s......' % title)
+        # 向href发送请求，直接获取到解析之后的内容
+        neirong = get_neirong(href)
+        print('结束下载%s' % title)
+        time.sleep(2)
+        string = '%s\n%s' % (title, neirong)
+        # 将string写入到文件中
+        fp.write(string)
+
+    fp.close()
+
+def get_neirong(href):
+    # 向href发送请求，获取响应，解析响应，返回内容
+    request = handle_request(href)
+    content = urllib.request.urlopen(request).read().decode('utf8')
+    # 生成soup对象，提取章节内容
+    soup = BeautifulSoup(content, 'lxml')
+    # 找包含章节内容的div
+    odiv = soup.find('div', class_='chapter_content')
+    neirong = odiv.text
+    return neirong
+
+def main():
+    url = 'http://www.shicimingju.com/book/sanguoyanyi.html'
+    # 解析第一个页面，返回所有的章节列表
+    chapter_list = parse_first_page(url)
+
+if __name__ == '__main__':
+    main()
+
+
+import requests
+url='http://www.baidu.com'
+req = requests.get(url)
+if (req.status_code == requests.status_codes.ok):#返回的状态码等于200就打印ok
+    print('ok')
+
+a=bin(2)#返回字符的二进制字符串
+print(a)#0b10
+c=format(2,'b')#返回不需要0b前缀
+print(c)#10
 '''
