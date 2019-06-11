@@ -1089,7 +1089,7 @@ except:
     print(f'语法错误')
 db.close()
 '''
-
+print(f'hello world')
 
 
 
