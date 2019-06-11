@@ -1064,7 +1064,7 @@ try:
 except:
     print(f"语法错误")
 db.close()
-'''
+
 
 import pymysql
 import json
@@ -1088,6 +1088,8 @@ try:
 except:
     print(f'语法错误')
 db.close()
+'''
+
 
 
 
