@@ -5,7 +5,7 @@
 '''
 invite=["zhangsan","lisi","wanger","zhouyi"] #创建一个列表
 print(invite) #打印列表
-print("lisi not come") #打印李四无法参加
+print("lisi not join") #打印李四无法参加
 invite[1]="wuwu" #修改列表第二个为wuwu
 print(invite) #打印修改后的列表
 invite.append("lisa")#在列表最后添加lisa
@@ -28,18 +28,18 @@ print(b+" "+"sorry!")
 invite=["zhangsan","lisi","wanger","zhouyi"]
 print(invite)
 print("lisi not come")
-invite[1]="wuwu"
+invite[1]="wuwu"#修改第二个元素为wuwu
 print(invite)
-invite.append("lisa")
+invite.append("lisa")#末尾添加lisa
 invite.append("wuso")
-invite.insert(0,"ksks")
-invite.insert(4,"psao")
+invite.insert(0,"ksks")#首位添加ksks
+invite.insert(4,"psao")#第五位添加psao
 print(invite)
-del invite[3]
+del invite[3]#删除第四个
 print(invite)
-invite.pop()
+invite.pop()#删除最后一个
 print(invite)
-a=invite.pop()
+a=invite.pop()#赋值a等于删除的元素
 print(a+" "+"sorry!")
 b=invite.pop()
 print(b+" "+"sorry!")
@@ -55,18 +55,18 @@ print(invite)
 print(len(invite))#打印当前元素长度
 num=[1,8,6,4,2,3,7,9,54]
 num.sort()#对元素进行排序
-del invite[0]
-print(invite)
-print(len(invite))
+del num[0]
+print(num)
+print(len(num))
 num=[1,8,6,4,2,3,7,9,54]
 num.sort()
 print(num)
 
 travel=["bq2","cq3","aq1","eq5","dq4"]
 print(travel)
-print(sorted(travel))
+print(sorted(travel))#对列表排序返回一个新的列表
 print(travel)
-travel.reverse()
+travel.reverse()#对列表进行倒序排列
 print(travel)
 travel.reverse()
 print(travel)
@@ -96,20 +96,22 @@ print("I relly love pizza")
 
 animals = ["cat","dog","pig"]
 for animal in animals:
-    print("A"+' '+animal.title()+' '+"would make a great pet")
+    print("A"+' '+animal.title()+' '+"would make a great pet")#title()首字母大写
 print("These animals all have legs")
 
 for i in range(0,21):
     print(i)
 
 numbers=list(range(1,1000001))
-print(min(numbers))
-print(max(numbers))
+print(min(numbers))#打印列表最小的数字
+print(max(numbers))#打印列表最大的数字
 print(sum(numbers))#总和
 
-OddNumber=list(range(1,21,2)) #创建一个1-20的奇数列表
+OddNumber=list(range(1, 21, 2)) #创建一个1-20的奇数列表
+number = list(range(1, 21, 2))
 for odd in OddNumber:
-    print(odd)
+    for num in number:
+        print(odd+num)
 
 mupitle=list(range(3,31,3))#创建一个能整除3的列表
 for mup in mupitle:
@@ -121,7 +123,10 @@ for a in range(1,11):
     cubes.append(cube)#把值添加到列表
 print(cubes)
 
-cubee=[b**3 for b in range(1,11,2)]#列表解析将FOR循环和创造新元素的代码合在了一起
+cubee=[
+    b**3
+    for b in range(1,11,2)
+        ]#列表解析将FOR循环和创造新元素的代码合在了一起
 print(sum(numbers))
 OddNumber=list(range(1,21,2))
 for odd in OddNumber:
@@ -149,7 +154,7 @@ else:
     print("not in")
 
 a="Cat"
-print(a.lower())
+print(a.lower())#所有字母小写
 
 age=int(input("请输入的年龄:"))
 if age<4:
@@ -240,7 +245,7 @@ friend={
     "city1":"china",
     "city":"mocswo"
 }
-for a in set(friend.values()):
+for a in set(friend.values()):#set创建一个不重复的字集
     print(a)
 
 rivers={
@@ -279,8 +284,8 @@ people={
         }
 }
 
-for i,j in people.items():
-    print("\nname:"+" "+i)
+for i, j in people.items():
+    print("\nname:"+" "+i)#\n换行
     print("first_name:"+j['first_name'])
     print("last_name:"+j["last_name"])
     print("age:"+j["age"])
@@ -914,4 +919,176 @@ a=bin(2)#返回字符的二进制字符串
 print(a)#0b10
 c=format(2,'b')#返回不需要0b前缀
 print(c)#10
+
+print(format(3,'3'), '娃哈哈', end='')#format格式化字符串  ‘3’字符串前空3个字符
+
+
+name = 'lqp'
+age = 23
+
+print(F'my name is {name} and age is {age}')
+
+frist_name = 'liqingpeng'
+print(f'{frist_name[:]}')#liqingpeng 切片所有
+print(f'{frist_name[1:6]}')#iqing 切片1至6位
+print(f'{frist_name[1:]}')#iqingpeng 切片1至最后一位
+print(f'{frist_name[1:5:3]}')#in 切片切片1-5，步长为3
+print(f'{frist_name[::-1]}')#gnepgniqil 反转所有字符
+print(len(frist_name)) # str长度
+
+list1 = ['lqp','wanger','zhangfei','wuban','zhangxing']
+with open('work.txt', 'a+', encoding='utf-8') as work:
+    # r = work.read()
+    # print(r.rstrip())
+    for i in list1:
+        work.write(
+            '\n' + i + '今年能实现愿望'
+        )
+
+work.close()
+
+#复制三国演义内容到work文本
+with open('work.txt','wb') as w, \
+    open('三国演义.txt', 'rb') as s:
+    w.write(s.read())
+
+
+with open('work.txt', 'a+') as w:
+    w.write('娃哈哈最好喝')
+
+
+#注册
+username = input(str('请输入你注册的用户名：'))
+pwd = input(str('请输入你的密码：'))
+with open('zhuce.txt',mode='a+') as z:
+    z.write(
+        f'{username},{pwd}\n'
+    )
+    z.close()
+
+#登陆
+user_name = input(str('请输入你的用户名：'))
+p_wd = input(str('请输入你的登陆密码：'))
+
+def login(user_name,p_wd):
+    with open('zhuce.txt', mode='r+') as c:
+        for user in c:
+            user =user.strip('\n')
+            user_list = user.split(',')
+            # print(user_list)
+            if user_name == user_list[0] and p_wd == user_list[1]:
+                print(f'登陆成功')
+                break
+            else:
+                print(f'用户名或密码错误')
+                break
+
+
+def arg(*args):#*args可以跟多个参数
+    rgs = 0
+    for num in args:
+        rgs += num
+    return rgs
+
+a=arg(1,2,3,4,5)
+print(a)
+
+def func(**kwargw):#形参中的**会将溢出的关键字实参全部接收，然后存储字典的形式，然后把字典赋值给**后的参数
+    print(kwargw)
+
+func(a=5)
+
+def index(name, age, sex):
+    print(f"name: {name}, age: {age}, sex: {sex}")
+
+
+def wrapper(*args, **kwargs):
+    print(f"args: {args}")
+    print(f"kwargs: {kwargs}")
+    index(*args, **kwargs)
+
+
+wrapper(name='nick', sex='male', age=19)
+
+
+
+str = '00010012345798runhub0'
+
+print(str.strip())# strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列。
+
+
+dist1 = ({i: i**2 for i in range(0,10)})
+print(f'{dist1}')
+
+print(sum([i for i in range(101)]))
+
+
+
+import pymysql
+
+db = pymysql.connect('localhost', 'root', '','test')
+cursor = db.cursor()
+sql = 'insert into student(name, age, address,phone) values("qingshu",17,"qinghai",1572347177)'
+try:
+    cursor.execute(sql)
+    db.commit()
+    print(f'执行成功')
+except:
+    print("语法错误")
+db.close()
+
+
+import pymysql
+
+db = pymysql.connect('localhost', 'root', '', 'test')
+
+cursor = db.cursor()
+try:
+    cursor.execute('delete from student where id = 6 ')
+    db.commit()
+    print(f"删除成功")
+except:
+    print(f"语法错误")
+db.close()
+
+
+import pymysql
+
+db = pymysql.connect('localhost', 'root', '', 'test')
+cursor = db.cursor()
+sql = 'update student set id = 6 where id =7'
+try:
+    cursor.execute(sql)
+    db.commit()
+    print(f"修改成功")
+except:
+    print(f"语法错误")
+db.close()
 '''
+
+import pymysql
+import json
+
+db = pymysql.connect('localhost', 'root', '123456', 'test')
+cursor = db.cursor()
+sql = 'select * from student where id =3'
+
+cursor.execute(sql)
+sele = cursor.fetchall()
+try:
+    for i in sele:
+        a1 = i[0]
+        b2 = i[1]
+        c3 = i[2]
+        d4 = i[3]
+        e5 = i[4]
+        data = str([{'id': a1, 'name': b2, 'age': c3, 'address': d4, 'phone': e5}])
+        json_data = json.dumps(data, sort_keys=True, indent=4, separators=(',', ':'))
+        print(json_data)
+except:
+    print(f'语法错误')
+db.close()
+
+
+
+
