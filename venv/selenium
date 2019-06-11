@@ -1,0 +1,17 @@
+#coding = uft-8
+from selenium import webdriver
+import time
+
+driver = webdriver.Chrome()
+driver.maximize_window()    #屏幕最大化
+driver.get("https://wbd.bp.t.jiabangou.com")
+driver.delete_all_cookies()   #删除所有cookie
+print(driver.get_cookies())
+driver.find_element_by_id("account").send_keys("15000000003")
+driver.find_element_by_css_selector("#password .ant-input").send_keys("111111")
+driver.find_element_by_class_name("ant-btn").click()
+# driver.find_element_by_css_selector("ant-tabs-tab:nth-child(5)").click()
+time.sleep(3)
+driver.back()    #后退页面
+time.sleep(5)
+driver.quit()
