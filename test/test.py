@@ -1108,12 +1108,23 @@ if __name__ == '__main__':
     print(os.path.normpath(path))
     # 分离文件名和扩展名
     print(os.path.splitext(path))
-'''
+
 
 import configparser
+if __name__== '__main__':
+    config = configparser.ConfigParser()
+    config.add_section('mysql')
+    config.set('mysql', 'host', '127.0.0.1')
+    config.set('mysql', 'user', 'root')
+    config.set('mysql', 'password', '123456')
+    config.set('mysql', 'port', '3306')
+    config.set('mysql', 'database', 'rbac')
+    with open('config.ini', 'w') as con:
+        config.write(con)
+    con.close()
+'''
 
+import os
 
-
-
-
+print(os.getcwd())
 

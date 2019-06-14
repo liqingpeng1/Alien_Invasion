@@ -6,7 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36fb246f-4d8e-40b5-b7e9-87b8758e42ac" name="Default Changelist" comment="selenium">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +21,7 @@
     <SUITE FILE_PATH="coverage/untitled4$test_01.coverage" NAME="test_01 Coverage Results" MODIFIED="1539324451754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test$test_01.coverage" NAME="test_01 Coverage Results" MODIFIED="1544421834784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1558582078418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/test$test.coverage" NAME="test Coverage Results" MODIFIED="1560480197554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test$test.coverage" NAME="test Coverage Results" MODIFIED="1560482624430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -93,8 +92,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="groovy" value="1" />
+          <entry key="ini" value="1" />
           <entry key="json" value="1" />
-          <entry key="py" value="50" />
+          <entry key="py" value="56" />
           <entry key="selenium" value="2" />
           <entry key="sql" value="2" />
           <entry key="test1" value="1" />
@@ -103,9 +103,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Ini" value="1" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="52" />
+          <entry key="Python" value="58" />
           <entry key="Scratch" value="3" />
           <entry key="UML" value="1" />
         </counts>
@@ -114,7 +115,7 @@
         <counts>
           <entry key="Python Console" value="16" />
           <entry key="dummy" value="6" />
-          <entry key="py" value="11204" />
+          <entry key="py" value="11601" />
           <entry key="selenium" value="629" />
           <entry key="sql" value="110" />
           <entry key="test1" value="124" />
@@ -124,7 +125,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="103" />
-          <entry key="Python" value="11973" />
+          <entry key="Python" value="12370" />
           <entry key="Scratch" value="110" />
         </counts>
       </usages-collector>
@@ -2000,8 +2001,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="1114" lean-forward="true" selection-start-line="1114" selection-end-line="1114" />
+            <state relative-caret-position="453">
+              <caret line="1130" lean-forward="true" selection-start-line="1130" selection-end-line="1130" />
             </state>
           </provider>
         </entry>
@@ -2018,6 +2019,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>BaiduTest</find>
+      <find>connet</find>
+      <find>connect</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2055,7 +2058,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="683" />
     <option name="width" value="1174" />
     <option name="height" value="1000" />
@@ -2457,12 +2460,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50149703" side_tool="true" weight="0.14712153" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49774435" visible="true" weight="0.14712153" />
-      <window_info id="Structure" order="2" sideWeight="0.5022556" side_tool="true" visible="true" weight="0.14712153" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49778435" visible="true" weight="0.14712153" />
+      <window_info id="Structure" order="2" sideWeight="0.5022157" side_tool="true" visible="true" weight="0.14712153" />
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.32975295" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5021322" side_tool="true" weight="0.30504835" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.2567132" />
@@ -2470,8 +2473,8 @@
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" sideWeight="0.49946696" weight="0.32975295" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4978678" weight="0.2728249" />
-      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.2857143" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4978678" visible="true" weight="0.2728249" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.2857143" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32975295" />
@@ -2555,13 +2558,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.groovy">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/pymysql/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/smtplib.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -2713,10 +2709,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Invasion/test/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="1071" column="13" selection-start-line="1071" selection-start-column="13" selection-end-line="1071" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/pymysql/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1733">
+          <caret line="90" column="11" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2426">
+          <caret line="482" column="8" selection-start-line="482" selection-start-column="8" selection-end-line="482" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="1114" lean-forward="true" selection-start-line="1114" selection-end-line="1114" />
+        <state relative-caret-position="453">
+          <caret line="1130" lean-forward="true" selection-start-line="1130" selection-end-line="1130" />
         </state>
       </provider>
     </entry>
