@@ -1087,9 +1087,32 @@ try:
         print(json_data)
 except:
     print(f'语法错误')
-db.close()
+db.close
+
+
+import os
+
+if __name__ == '__main__':
+    # 获取当前工作目录
+    print(os.getcwd())
+    # 新建文件夹
+    # os.mkdir('selenium')
+    os.chdir('C:/Users\Administrator\PycharmProjects')
+    print(os.getcwd())
+    # 先初始化当前文件全路径变量
+    path = __file__
+    print(path)
+    # 获取当前绝对路径
+    print(os.path.abspath(path))
+    # 将目标路径规范化， 即更规范的路径表达方式，跨平台标识
+    print(os.path.normpath(path))
+    # 分离文件名和扩展名
+    print(os.path.splitext(path))
 '''
-print(f'hello world')
+
+import configparser
+
+
 
 
 
