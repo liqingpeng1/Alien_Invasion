@@ -1,5 +1,4 @@
-
-#!/usr/bin/env python
+# !/usr/bin/env python
 # !-*- coding:utf-8 -*-
 
 '''
@@ -1122,9 +1121,63 @@ if __name__== '__main__':
     with open('config.ini', 'w') as con:
         config.write(con)
     con.close()
+
+
+num = 0
+while True:
+    name = input(str('请输入你的用户名：'))
+    pwd = input(str('请输入你的密码：'))
+    num += 1
+    if name == 'seven' and pwd == '123':
+        print(f'登陆成功')
+        break
+    else:
+        print(f'用户名或密码错误')
+    if num >3:
+        print(f'没机会了')
+        break
+
 '''
 
-import os
+# 玩家摇两颗色子 如果第一次摇出7点或11点 玩家胜
+# 如果摇出2点 3点 12点 庄家胜 其他情况游戏继续
+# 玩家再次要色子 如果摇出7点 庄家胜
+# 如果摇出第一次摇的点数 玩家胜
+# 否则游戏继续 玩家继续摇色子
+# 玩家进入游戏时有1000元的赌注 全部输光游戏结束
 
-print(os.getcwd())
+from random import randint
+money = 1000
+while money > 0:
+    print(f'你的总资产是%s' % money+'元')
+    num = False
+    while True:
+        dect = int(input(f"你的下注金额是："))
+        if dect > 0 and dect <= money:
+            break
+    first = randint(1, 6) + randint(1,6)
+    print(f'玩家摇出的是%s' % first)
+    if first in(7, 11):
+        print(f'玩家胜')
+        money += dect
+    elif first in (2, 3, 12):
+        print(f"庄家胜")
+        money -= dect
+    else:
+        num = True
+    while num:
+        second = randint(1, 6) + randint(1, 6)
+        print(f'玩家摇出了%s' % second)
+        if second == 7:
+            print(f'庄家胜')
+            money -= dect
+            num = False
+        elif second == first:
+            print(f'玩家摇出了%s'%second)
+            print(f'玩家胜')
+            money +=dect
+            num = False
+print(f'资产不足')
+
+
 
