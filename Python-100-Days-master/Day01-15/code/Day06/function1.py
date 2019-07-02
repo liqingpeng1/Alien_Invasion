@@ -15,4 +15,6 @@ def factorial(n):
     return result
 
 
-print(factorial(7) // factorial(3) // factorial(4))
+print(factorial(7))
+print(factorial(3))
+print(factorial(4))

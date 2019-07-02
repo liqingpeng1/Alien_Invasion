@@ -1137,7 +1137,7 @@ while True:
         print(f'没机会了')
         break
 
-'''
+
 
 # 玩家摇两颗色子 如果第一次摇出7点或11点 玩家胜
 # 如果摇出2点 3点 12点 庄家胜 其他情况游戏继续
@@ -1179,5 +1179,33 @@ while money > 0:
             num = False
 print(f'资产不足')
 
+import  keyword
 
+print(keyword.kwlist)#查看关键词
+'''
 
+import requests
+url = 'http://cp.qishixingqiu.com/api/cooperation/express/express_orders'
+params = {
+    'page': 0,
+    'size':10,
+    'status':'all',
+    'orderWay': 'all',
+    'keyWords': '123054',
+    'merchId': '574',
+    't': '1561949702573',
+    'cooperationId':1
+        }
+header = {
+    'Authorization':'eyJhbGciOiJIUzI1NiJ9.eyJtb2R1bGUiOiJjcFVzZXJJbmZvQ29udGV4dCIsImNwVXNlckluZm9Db250ZXh0Ijoie1wiY29vcGVyYXRpb25Sb2xlTWFwXCI6ezE6e1wiYnVzaW5lc3Nlc1wiOltcIm1hbmFnZW1lbnRcIixcInJlbnQtY2FyXCIsXCJleHByZXNzXCJdLFwiY29vcGVyYXRpb25JZFwiOjEsXCJtYW5hZ2VtZW50XCI6dHJ1ZX19LFwidXNlcklkXCI6NTMxMDJ9IiwiZXhwIjoxNTYxOTk3NDU0fQ.icsK1sp59jcNacSssaTfGxJMP0b6VNqFpQGuyBWMtTs',
+       'content-type':'application/json'
+        }
+rest = requests.get(url, headers=header, params=params)
+print(rest.json())
+#返回值json格式
+print(rest.text)
+#返回值text格式
+print(rest.status_code)
+#返回响应值
+print(rest.url)
+#返回url
