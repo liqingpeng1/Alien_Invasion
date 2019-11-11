@@ -1069,9 +1069,9 @@ db.close()
 import pymysql
 import json
 
-db = pymysql.connect('localhost', 'root', '123456', 'test')
+db = pymysql.connect('localhost', 'root', '123456', 'zxgl')
 cursor = db.cursor()
-sql = 'select * from student where id =3'
+sql = 'select * from bj_user where id =1'
 
 cursor.execute(sql)
 sele = cursor.fetchall()
